@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,14 +7,11 @@ import { ApiService } from './api.service';
 })
 export class AppComponent implements OnInit{
 
-constructor(private api:ApiService) { }
-products:any;
+constructor() { }
+
 
 ngOnInit(): void {
-    this.api.get("https://fakestoreapi.com/products").subscribe((result)=>{
-      console.log(result);
-      this.products = result;
-    })
+
   }
 
 }

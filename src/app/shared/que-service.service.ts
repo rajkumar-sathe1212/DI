@@ -4,12 +4,11 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class QueServiceService {
 
-  constructor(private http:HttpClient){ }
+  constructor(private http:HttpClient) { }
 
-  get(url:string){
-    return this.http.get(url);
+  get(){
+    return this.http.get("assets/db.json");
   }
-  
 }
